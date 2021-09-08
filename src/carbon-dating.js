@@ -22,4 +22,4 @@ export default function dateSample(/* sampleActivity */) {
   // remove line with error and write your code here
 }
 
-return false;
+//return false;
