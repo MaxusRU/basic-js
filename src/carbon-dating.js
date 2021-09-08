@@ -21,3 +21,5 @@ export default function dateSample(/* sampleActivity */) {
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
+
+return false;
