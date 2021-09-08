@@ -13,14 +13,22 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default function getSeason(date) {
   // throw new NotImplementedError('Not implemented');
+  // remove line with error and write your code here
 
   // if (!date) {
   //   throw new PropertyRequiredError("Invalid date!");
-  // remove line with error and write your code here
   // console.log(date.getMonth());
-  if (!date || date === undefined || isNaN(date)) // return false;
+  // try{
+  //   var d = new Date(date);
+  // }catch(err){
+  //   throw new NotImplementedError('Invalid date!'); //return false;
+  // }
+  if (!date || date === undefined || isNaN(date))// || typeof(data) != "string") // return false;
     throw new NotImplementedError('Invalid date!');
   const month = date.getMonth();
+  // if (!month)
+  //   return false;
+  // return false;
   if (month >=2 && month <= 4)
     return 'spring';
   if (month >=5 && month <= 7)
@@ -29,5 +37,7 @@ export default function getSeason(date) {
     return 'autumn';
   if (month >=11 || month <= 1)
     return 'winter';
+  else
+    return false;
   // return date.getMonth();
 }
