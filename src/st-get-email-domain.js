@@ -14,30 +14,24 @@ export default function getEmailDomain(email) {
   // throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 
-  // for (let i in email){
-  //   // console.log(email[i]);
-  //   if (email[i] == '@'){ // /*return*/ console.log(email.slice(i,3));
-  //     email = email.split('');
-  //     email.splice(0, i);
-  //   }
-  // }
-  // email.shift();
-  // return email.join('');
-  // return email;//.join('');
-  // return email; //tst
-  // return email; //
-  email = email.split('');
-  let ind = email.findIndex(i => i == '@');
-  console.log(ind);
-  email.splice(0, ind+1);
-  // email = email.join('');
-  ind = email.findIndex(i => i == '@');
-  console.log(ind);
-  email.splice(0, ind+1);
-  email = email.join('');
+  //let email = 'pretty@andsimple@example.com';
   
+  const emailArray = email.split('@');
+  return emailArray[emailArray.length-1];
+  
+  // works with 2 '@' at email
+  // email = email.split('');
+  // let ind = email.findIndex(i => i == '@');
+  // console.log(ind);
+  // email.splice(0, ind+1);
+  // ind = email.findIndex(i => i == '@');
+  // console.log(ind);
+  // email.splice(0, ind+1);
+  // email = email.join('');
+  // return email;
+  
+
   // email = email.split(' ').join('');
-  return email;
 
   // email = email.split('');
   // let output = [];
