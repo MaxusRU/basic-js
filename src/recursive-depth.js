@@ -13,8 +13,25 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default class DepthCalculator {
-  calculateDepth(/* arr */) {
-    throw new NotImplementedError('Not implemented');
+  calculateDepth(arr) {
+    // throw new NotImplementedError('Not implemented');
     // remove line with error and write your code here
+
+  // const firstUniqChar = (arr) => {
+      let depth = 0;
+      if (Array.isArray(arr)) depth++;
+      for (let i of arr){
+        if (Array.isArray(i)){
+          depth++;
+          for (let i of arr) if (Array.isArray(i)){
+            if (Array.isArray(i)){
+              depth++;
+              for (let i of arr) if (Array.isArray(i)) depth++;
+            }
+          }
+        }
+      }
+      return depth;
+    // }
   }
 }
